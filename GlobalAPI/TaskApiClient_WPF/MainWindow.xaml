@@ -1,0 +1,166 @@
+<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+    x:Class="TaskApiClient_WPF.MainWindow"
+    Title="Task API Client" Height="520" Width="900" WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10,10,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Grid.Row="0">
+            <TabItem Header="Búsqueda de Tareas">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="192*"/>
+                        <ColumnDefinition Width="45*"/>
+                        <ColumnDefinition Width="24*"/>
+                        <ColumnDefinition Width="613*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.ColumnSpan="4" >
+                        <StackPanel Orientation="Vertical" Width="320" Margin="0,0,10,0">
+                            <Label Content="Código Unidad:" />
+                            <ComboBox x:Name="ComboUnits" DisplayMemberPath="Display" SelectedValuePath="Code" >
+                                <ComboBox.Background>
+                                    <LinearGradientBrush EndPoint="0,1">
+                                        <GradientStop Color="#FFF0F0F0"/>
+                                        <GradientStop Color="#FFAAE2BF" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </ComboBox.Background>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Width="200" Margin="0,0,10,0">
+                            <Label Content="Fecha Inicial:" />
+                            <DatePicker x:Name="DatePickerStart" SelectedDate="{x:Static sys:DateTime.Now}" Background="#FFCECE74" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Width="200" Margin="0,0,10,0">
+                            <Label Content="Fecha Final:" />
+                            <DatePicker x:Name="DatePickerEnd" SelectedDate="{x:Static sys:DateTime.Now}" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+                            <Button x:Name="BtnSearch" Content="Search" Width="100" Height="30" Click="BtnSearch_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <TextBlock Grid.Row="1" Text="Resultados:" x:Name="txtResultados" FontWeight="Bold" Margin="0,0,0,5" Grid.ColumnSpan="2"/>
+
+
+                    <DataGrid x:Name="DataGridResults" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True" Grid.ColumnSpan="4" MouseDoubleClick="dataGridTasks_MouseDoubleClick" LoadingRow="EoloDataGrid_LoadingRow">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Código Unidad" Binding="{Binding UnitCode}" Width="100"/>
+                            <DataGridTextColumn Header="Tarea" Binding="{Binding TaskCode}" Width="120"/>
+                            <DataGridTextColumn Header="FunCode" Binding="{Binding FunCode}" Width="120"/>
+                            <DataGridTextColumn Header="Fecha" Binding="{Binding TaskExecutionDate,StringFormat=dd/MM/yyyy}" Width="150"/>
+                            <DataGridTextColumn Header="Estado" Binding="{Binding TaskExecutionStatusCode}" Width="100"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Envío de Tareas ejecutadas">
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                        <TextBlock Text="Código Unidad:" />
+                        <ComboBox x:Name="ComboUnitDone" DisplayMemberPath="Display" SelectedValuePath="Code" />
+
+                        <TextBlock Text="Código Tarea:" Margin="0,10,0,0" />
+                        <TextBox x:Name="TxtTaskCodeDone" MaxLength="10" />
+
+                        <TextBlock Text="FunCode:" Margin="0,10,0,0" />
+                        <TextBox x:Name="TxtFunCodeDone" MaxLength="30" />
+
+                        <TextBlock Text="Fecha:" Margin="0,10,0,0" />
+                        <DatePicker x:Name="DatePickerFechaDone" SelectedDate="{x:Static sys:DateTime.Now}"/>
+
+                        <TextBlock Text="TaskExecutionStatusCode" Margin="0,10,0,0" />
+                        <ComboBox x:Name="ComboTaskStatusCodeDone" DisplayMemberPath="Display" SelectedValuePath="Code" />
+
+                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                            <Button x:Name="BtnSelectImage" Content="Seleccionar imagen..." Click="BtnSelectImage_Click" />
+                            <TextBlock x:Name="LblImageName" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+
+                        <TextBlock x:Name="TxtValidationErrors" Foreground="Red" TextWrapping="Wrap" Margin="0,10,0,0"/>
+                        <Button x:Name="BtnSend" Content="Enviar" Width="120" Height="32" Margin="0,10,0,0" Click="BtnSend_Click"/>
+                    </StackPanel>
+
+
+                    <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Padding="8">
+                        <StackPanel>
+                            <TextBlock Text="Previsualización de la imagen:" FontWeight="Bold" Margin="0,0,0,8"/>
+                            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                                <Image x:Name="ImgPreview" Stretch="Uniform" MaxHeight="380"/>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Consulta de tareas enviadas">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Button Content="Cargar Datos" Click="BtnCargar_Click" Width="150" Height="35" Margin="0,0,0,10" />
+
+                    <DataGrid x:Name="dgTareas" Grid.Row="1" AutoGenerateColumns="False"  LoadingRow="EoloDataGrid_LoadingRow" IsReadOnly="True" RowHeight="130" Margin="0,0,0,10">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Código Unidad" Binding="{Binding UnitCode}" Width="*"/>
+                            <DataGridTextColumn Header="Tarea" Binding="{Binding TaskCode}" Width="*"/>
+                            <DataGridTextColumn Header="FunCode" Binding="{Binding FunCode}" Width="*"/>
+                            <DataGridTextColumn Header="Fecha" Binding="{Binding TaskDate,StringFormat=dd/MM/yyyy}" Width="150"/>
+                            <DataGridTextColumn Header="Estado" Binding="{Binding TaskExecutionStatusCode}" Width="*"/>
+
+                            <DataGridTemplateColumn Header="Imagen" Width="140">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding ImagenBitmap}" Width="128" Height="128" Stretch="UniformToFill" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+        <StatusBar Grid.Row="1" Background="#FFEEEEEE" Padding="5" Margin="-10,10,-10,-10" FontWeight="Bold">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel LastChildFill="False" Height="25"/>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+
+            <StatusBarItem DockPanel.Dock="Left" Content="{Binding AppVersion}" Margin="10,0"/>
+            <Separator/>
+            <StatusBarItem DockPanel.Dock="Left" Content="{Binding DatabaseInfo}" Margin="10,0"/>
+            <Separator/>
+            <StatusBarItem DockPanel.Dock="Left" Content="{Binding ApiUrl}" Margin="10,0"/>
+            <Separator/>
+            <StatusBarItem DockPanel.Dock="Right" Content="{Binding CurrentDateTime}" Margin="10,0"  Foreground="Coral"/>
+        </StatusBar>
+
+    </Grid>
+
+</Window>

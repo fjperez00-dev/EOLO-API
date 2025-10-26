@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gigia\\OneDrive\\Documentos\\Visual Studio 2022\\Projects\\API-Rest-EOLO\\API_EoloTLSS_Execution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EDB88CE1-E1CE-47F1-8D58-80DF81FD9A0D}|API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj|c:\\users\\gigia\\onedrive\\documentos\\visual studio 2022\\projects\\api-rest-eolo\\api_eolotlss_execution\\api_eolotlss_execution\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDB88CE1-E1CE-47F1-8D58-80DF81FD9A0D}|API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj|solutionrelative:api_eolotlss_execution\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDB88CE1-E1CE-47F1-8D58-80DF81FD9A0D}|API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj|c:\\users\\gigia\\onedrive\\documentos\\visual studio 2022\\projects\\api-rest-eolo\\api_eolotlss_execution\\api_eolotlss_execution\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDB88CE1-E1CE-47F1-8D58-80DF81FD9A0D}|API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj|solutionrelative:api_eolotlss_execution\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDB88CE1-E1CE-47F1-8D58-80DF81FD9A0D}|API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj|c:\\users\\gigia\\onedrive\\documentos\\visual studio 2022\\projects\\api-rest-eolo\\api_eolotlss_execution\\api_eolotlss_execution\\models\\taskexecution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDB88CE1-E1CE-47F1-8D58-80DF81FD9A0D}|API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj|solutionrelative:api_eolotlss_execution\\models\\taskexecution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDB88CE1-E1CE-47F1-8D58-80DF81FD9A0D}|API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj|c:\\users\\gigia\\onedrive\\documentos\\visual studio 2022\\projects\\api-rest-eolo\\api_eolotlss_execution\\api_eolotlss_execution\\api_eolotlss_execution.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EDB88CE1-E1CE-47F1-8D58-80DF81FD9A0D}|API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj|solutionrelative:api_eolotlss_execution\\api_eolotlss_execution.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gigia\\OneDrive\\Documentos\\Visual Studio 2022\\Projects\\API-Rest-EOLO\\API_EoloTLSS_Execution\\API_EoloTLSS_Execution\\Program.cs",
+              "RelativeDocumentMoniker": "API_EoloTLSS_Execution\\Program.cs",
+              "ToolTip": "C:\\Users\\gigia\\OneDrive\\Documentos\\Visual Studio 2022\\Projects\\API-Rest-EOLO\\API_EoloTLSS_Execution\\API_EoloTLSS_Execution\\Program.cs",
+              "RelativeToolTip": "API_EoloTLSS_Execution\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T17:36:09.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskExecution.cs",
+              "DocumentMoniker": "C:\\Users\\gigia\\OneDrive\\Documentos\\Visual Studio 2022\\Projects\\API-Rest-EOLO\\API_EoloTLSS_Execution\\API_EoloTLSS_Execution\\Models\\TaskExecution.cs",
+              "RelativeDocumentMoniker": "API_EoloTLSS_Execution\\Models\\TaskExecution.cs",
+              "ToolTip": "C:\\Users\\gigia\\OneDrive\\Documentos\\Visual Studio 2022\\Projects\\API-Rest-EOLO\\API_EoloTLSS_Execution\\API_EoloTLSS_Execution\\Models\\TaskExecution.cs",
+              "RelativeToolTip": "API_EoloTLSS_Execution\\Models\\TaskExecution.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T17:27:02.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "API_EoloTLSS_Execution",
+              "DocumentMoniker": "C:\\Users\\gigia\\OneDrive\\Documentos\\Visual Studio 2022\\Projects\\API-Rest-EOLO\\API_EoloTLSS_Execution\\API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj",
+              "RelativeDocumentMoniker": "API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj",
+              "ToolTip": "C:\\Users\\gigia\\OneDrive\\Documentos\\Visual Studio 2022\\Projects\\API-Rest-EOLO\\API_EoloTLSS_Execution\\API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj",
+              "RelativeToolTip": "API_EoloTLSS_Execution\\API_EoloTLSS_Execution.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-11T17:21:31.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "C:\\Users\\gigia\\OneDrive\\Documentos\\Visual Studio 2022\\Projects\\API-Rest-EOLO\\API_EoloTLSS_Execution\\API_EoloTLSS_Execution\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "API_EoloTLSS_Execution\\Controllers\\TasksController.cs",
+              "ToolTip": "C:\\Users\\gigia\\OneDrive\\Documentos\\Visual Studio 2022\\Projects\\API-Rest-EOLO\\API_EoloTLSS_Execution\\API_EoloTLSS_Execution\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "API_EoloTLSS_Execution\\Controllers\\TasksController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T17:18:10.424Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+@API_EoloTLSS_Execution_HostAddress = http://localhost:5039
+
+GET {{API_EoloTLSS_Execution_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "TaskApi_Seguro_Completo\\TaskApi_EOLO.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "TaskApiClient_WPF\\TaskApiClient_WPF.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
